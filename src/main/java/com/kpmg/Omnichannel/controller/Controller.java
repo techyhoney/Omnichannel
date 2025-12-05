@@ -1,4 +1,4 @@
-package com.kpmg.Omnichannel.controller;
+package com.kpmg.omnichannel.controller;
 
 public class Controller {
 

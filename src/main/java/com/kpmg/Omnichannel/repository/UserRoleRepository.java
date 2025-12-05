@@ -1,6 +1,6 @@
-package com.kpmg.Omnichannel.repository;
+package com.kpmg.omnichannel.repository;
 
-import com.kpmg.Omnichannel.model.UserRole;
+import com.kpmg.omnichannel.model.UserRole;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

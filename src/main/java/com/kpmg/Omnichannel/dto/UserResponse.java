@@ -1,8 +1,8 @@
-package com.kpmg.Omnichannel.dto;
+package com.kpmg.omnichannel.dto;
 
-import com.kpmg.Omnichannel.model.KycStatus;
-import com.kpmg.Omnichannel.model.UserStatus;
-import com.kpmg.Omnichannel.model.UserType;
+import com.kpmg.omnichannel.model.KycStatus;
+import com.kpmg.omnichannel.model.UserStatus;
+import com.kpmg.omnichannel.model.UserType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

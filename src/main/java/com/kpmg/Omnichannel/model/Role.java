@@ -1,4 +1,4 @@
-package com.kpmg.Omnichannel.model;
+package com.kpmg.omnichannel.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

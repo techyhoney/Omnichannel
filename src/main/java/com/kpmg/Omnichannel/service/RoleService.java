@@ -1,15 +1,15 @@
-package com.kpmg.Omnichannel.service;
+package com.kpmg.omnichannel.service;
 
-import com.kpmg.Omnichannel.dto.RoleRequest;
-import com.kpmg.Omnichannel.dto.RoleResponse;
-import com.kpmg.Omnichannel.exception.ResourceAlreadyExistsException;
-import com.kpmg.Omnichannel.exception.ResourceNotFoundException;
-import com.kpmg.Omnichannel.model.Role;
-import com.kpmg.Omnichannel.model.User;
-import com.kpmg.Omnichannel.model.UserRole;
-import com.kpmg.Omnichannel.repository.RoleRepository;
-import com.kpmg.Omnichannel.repository.UserRepository;
-import com.kpmg.Omnichannel.repository.UserRoleRepository;
+import com.kpmg.omnichannel.dto.RoleRequest;
+import com.kpmg.omnichannel.dto.RoleResponse;
+import com.kpmg.omnichannel.exception.ResourceAlreadyExistsException;
+import com.kpmg.omnichannel.exception.ResourceNotFoundException;
+import com.kpmg.omnichannel.model.Role;
+import com.kpmg.omnichannel.model.User;
+import com.kpmg.omnichannel.model.UserRole;
+import com.kpmg.omnichannel.repository.RoleRepository;
+import com.kpmg.omnichannel.repository.UserRepository;
+import com.kpmg.omnichannel.repository.UserRoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

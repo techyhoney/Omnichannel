@@ -1,4 +1,4 @@
-package com.kpmg.Omnichannel.exception;
+package com.kpmg.omnichannel.exception;
 
 public class ResourceAlreadyExistsException extends RuntimeException {
     public ResourceAlreadyExistsException(String message) {

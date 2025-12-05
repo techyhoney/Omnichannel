@@ -1,6 +1,6 @@
-package com.kpmg.Omnichannel.exception;
+package com.kpmg.omnichannel.exception;
 
-import com.kpmg.Omnichannel.dto.ApiResponse;
+import com.kpmg.omnichannel.dto.ApiResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;

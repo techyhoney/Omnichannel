@@ -1,4 +1,4 @@
-package com.kpmg.Omnichannel.dto;
+package com.kpmg.omnichannel.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

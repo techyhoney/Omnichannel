@@ -1,11 +1,11 @@
-package com.kpmg.Omnichannel.controller;
+package com.kpmg.omnichannel.controller;
 
-import com.kpmg.Omnichannel.dto.ApiResponse;
-import com.kpmg.Omnichannel.dto.UserRequest;
-import com.kpmg.Omnichannel.dto.UserResponse;
-import com.kpmg.Omnichannel.model.UserStatus;
-import com.kpmg.Omnichannel.model.UserType;
-import com.kpmg.Omnichannel.service.UserService;
+import com.kpmg.omnichannel.dto.ApiResponse;
+import com.kpmg.omnichannel.dto.UserRequest;
+import com.kpmg.omnichannel.dto.UserResponse;
+import com.kpmg.omnichannel.model.UserStatus;
+import com.kpmg.omnichannel.model.UserType;
+import com.kpmg.omnichannel.service.UserService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

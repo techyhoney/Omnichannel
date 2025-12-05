@@ -1,4 +1,4 @@
-package com.kpmg.Omnichannel.util;
+package com.kpmg.omnichannel.util;
 
 public enum RequestType {
 	

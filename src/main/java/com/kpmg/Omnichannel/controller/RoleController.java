@@ -1,9 +1,9 @@
-package com.kpmg.Omnichannel.controller;
+package com.kpmg.omnichannel.controller;
 
-import com.kpmg.Omnichannel.dto.ApiResponse;
-import com.kpmg.Omnichannel.dto.RoleRequest;
-import com.kpmg.Omnichannel.dto.RoleResponse;
-import com.kpmg.Omnichannel.service.RoleService;
+import com.kpmg.omnichannel.dto.ApiResponse;
+import com.kpmg.omnichannel.dto.RoleRequest;
+import com.kpmg.omnichannel.dto.RoleResponse;
+import com.kpmg.omnichannel.service.RoleService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

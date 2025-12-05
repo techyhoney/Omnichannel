@@ -1,15 +1,15 @@
-package com.kpmg.Omnichannel.service;
+package com.kpmg.omnichannel.service;
 
-import com.kpmg.Omnichannel.dto.UserRequest;
-import com.kpmg.Omnichannel.dto.UserResponse;
-import com.kpmg.Omnichannel.exception.ResourceAlreadyExistsException;
-import com.kpmg.Omnichannel.exception.ResourceNotFoundException;
-import com.kpmg.Omnichannel.model.KycStatus;
-import com.kpmg.Omnichannel.model.User;
-import com.kpmg.Omnichannel.model.UserRole;
-import com.kpmg.Omnichannel.model.UserStatus;
-import com.kpmg.Omnichannel.model.UserType;
-import com.kpmg.Omnichannel.repository.UserRepository;
+import com.kpmg.omnichannel.dto.UserRequest;
+import com.kpmg.omnichannel.dto.UserResponse;
+import com.kpmg.omnichannel.exception.ResourceAlreadyExistsException;
+import com.kpmg.omnichannel.exception.ResourceNotFoundException;
+import com.kpmg.omnichannel.model.KycStatus;
+import com.kpmg.omnichannel.model.User;
+import com.kpmg.omnichannel.model.UserRole;
+import com.kpmg.omnichannel.model.UserStatus;
+import com.kpmg.omnichannel.model.UserType;
+import com.kpmg.omnichannel.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
