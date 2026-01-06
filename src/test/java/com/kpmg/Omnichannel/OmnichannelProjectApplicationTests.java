@@ -1,4 +1,4 @@
-package com.kpmg.Omnichannel;
+package com.kpmg.omnichannel;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
