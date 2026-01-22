@@ -8,6 +8,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.Set;
 import java.util.UUID;
@@ -26,6 +27,7 @@ public class UserResponse {
     private UserType userType;
     private UserStatus status;
     private KycStatus kycStatus;
+    private BigDecimal walletBalance;
     private Set<String> roles;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;

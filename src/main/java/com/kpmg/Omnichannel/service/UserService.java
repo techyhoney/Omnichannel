@@ -109,6 +109,26 @@ public class UserService {
                 .collect(Collectors.toList());
     }
 
+    @Transactional
+    public UserResponse updateUserStatus(UUID userId, UserStatus status) {
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new ResourceNotFoundException("User not found with id: " + userId));
+        
+        user.setStatus(status);
+        User updatedUser = userRepository.save(user);
+        return convertToResponse(updatedUser);
+    }
+
+    @Transactional
+    public UserResponse updateUserKycStatus(UUID userId, KycStatus kycStatus) {
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new ResourceNotFoundException("User not found with id: " + userId));
+        
+        user.setKycStatus(kycStatus);
+        User updatedUser = userRepository.save(user);
+        return convertToResponse(updatedUser);
+    }
+
     private UserResponse convertToResponse(User user) {
         Set<String> roles = user.getUserRoles().stream()
                 .map(ur -> ur.getRole().getName())
@@ -123,6 +143,7 @@ public class UserService {
                 .userType(user.getUserType())
                 .status(user.getStatus())
                 .kycStatus(user.getKycStatus())
+                .walletBalance(user.getWalletBalance())
                 .roles(roles)
                 .createdAt(user.getCreatedAt())
                 .updatedAt(user.getUpdatedAt())

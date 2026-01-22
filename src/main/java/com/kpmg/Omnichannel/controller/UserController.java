@@ -3,9 +3,12 @@ package com.kpmg.omnichannel.controller;
 import com.kpmg.omnichannel.dto.ApiResponse;
 import com.kpmg.omnichannel.dto.UserRequest;
 import com.kpmg.omnichannel.dto.UserResponse;
+import com.kpmg.omnichannel.model.KycStatus;
 import com.kpmg.omnichannel.model.UserStatus;
 import com.kpmg.omnichannel.model.UserType;
 import com.kpmg.omnichannel.service.UserService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -67,5 +70,25 @@ public class UserController {
     public ResponseEntity<ApiResponse<List<UserResponse>>> getUsersByStatus(@PathVariable UserStatus status) {
         List<UserResponse> users = userService.getUsersByStatus(status);
         return ResponseEntity.ok(ApiResponse.success("Users retrieved successfully", users));
+    }
+
+    @PutMapping("/{userId}/status/{status}")
+    @Operation(summary = "Update user account status", 
+               description = "Update user account status to ACTIVE, INACTIVE, or LOCKED")
+    public ResponseEntity<ApiResponse<UserResponse>> updateUserStatus(
+            @Parameter(description = "User ID") @PathVariable UUID userId,
+            @Parameter(description = "New status") @PathVariable UserStatus status) {
+        UserResponse user = userService.updateUserStatus(userId, status);
+        return ResponseEntity.ok(ApiResponse.success("User status updated successfully to " + status, user));
+    }
+
+    @PutMapping("/{userId}/kyc-status/{kycStatus}")
+    @Operation(summary = "Update user KYC status", 
+               description = "Update user KYC verification status to PENDING, VERIFIED, or REJECTED")
+    public ResponseEntity<ApiResponse<UserResponse>> updateUserKycStatus(
+            @Parameter(description = "User ID") @PathVariable UUID userId,
+            @Parameter(description = "New KYC status") @PathVariable KycStatus kycStatus) {
+        UserResponse user = userService.updateUserKycStatus(userId, kycStatus);
+        return ResponseEntity.ok(ApiResponse.success("User KYC status updated successfully to " + kycStatus, user));
     }
 }
